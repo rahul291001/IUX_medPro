@@ -11,10 +11,10 @@
 }
 .custom-image {
   width: 82px;
-  height: 84px;
-  position: absolute;
-  top: 5.5%;
-  left: 4.5%;
+  height: 85px;
+  position: fixed;
+  top: 32px;
+  left: 57px;
 }
 .profile-name {
   margin-top: -20px;
