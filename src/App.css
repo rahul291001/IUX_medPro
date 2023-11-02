@@ -1,0 +1,12 @@
+/* App.css */
+.app {
+  display: flex;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+
+
+.content {
+  flex: 1; /* Allow the content to take up the remaining space */
+  padding: 20px; /* Add some padding to the content area */
+}

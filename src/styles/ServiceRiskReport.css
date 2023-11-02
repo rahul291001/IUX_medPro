@@ -1,0 +1,417 @@
+/* ServiceRiskReport.css */
+.service-risk-report {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.filters {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 80px;
+  border-radius: 8px;
+}
+
+.filtericon {
+  width: 22px;
+  height: 15px;
+  margin-right: 5px;
+}
+.filter-text {
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 200px;
+  line-height: 20px;
+  color: #344054;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.search-icon img {
+  height: 19px;
+  width: 27px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.bar {
+  height: 34px;
+  width: 6px;
+}
+.go-button {
+  background-color: #e92431;
+  color: #fff5f5;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 22px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 20px;
+  font-family: Montserrat;
+}
+/* Style for .dropdowns and .date-range containers */
+.dropdowns,
+.date-range {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.dropdown-a {
+  margin-right: 10px;
+  background: #ffeeee;
+  height: 30px;
+  width: 62px;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+  color: #e92431;
+  font-family: Montserrat;
+}
+
+.dropdown-b {
+  margin-right: 15px;
+  background: #ffeeee;
+  height: 30px;
+  width: 70px;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+  color: #e92431;
+  font-family: Montserrat;
+}
+/* Style for individual .dropdown elements */
+.date-range p {
+  cursor: pointer;
+  background: #ffeeee;
+  height: 20px;
+  width: 172px;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+  color: #e92431;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.red-button {
+  background-color: #e92431;
+  color: white;
+  border: none;
+  width: 116px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  font-family: Montserrat;
+}
+
+/*------------------------------------* talbe */
+.serviceRiskReport-container {
+  margin-top: 18px;
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+}
+
+.serviceRiskReport-table {
+  border: 1px solid #ffffff;
+  border-collapse: collapse;
+  width: 120%;
+  border-radius: 5px;
+  box-shadow: 0px -2px 2px 0px #1b1f250d;
+}
+
+.grey-heading-border {
+  color: grey;
+  font-family: Montserrat;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0;
+  padding: 8px;
+}
+
+.white-row {
+  background-color: #f9fafb;
+}
+
+.light-grey-row {
+  background-color: #ffffff;
+}
+
+/* Add a class to style the highlighted row */
+.white-row:hover,
+.light-grey-row:hover {
+  background-color: #f5f4f4;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+.border {
+  padding: 8px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.medicine-name {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: nowrap;
+  color: #1b1f25;
+  margin-left: 15px;
+}
+
+.serviceRiskReport-table tbody tr:nth-child(1),
+.serviceRiskReport-table tbody tr:nth-child(2) {
+  color: #07da01;
+}
+
+.serviceRiskReport-table tbody tr:nth-child(3),
+.serviceRiskReport-table tbody tr:nth-child(4) {
+  color: #0586ec;
+}
+
+.serviceRiskReport-table tbody tr:nth-child(5),
+.serviceRiskReport-table tbody tr:nth-child(6),
+.serviceRiskReport-table tbody tr:nth-child(7) {
+  color: #07da01;
+}
+
+.serviceRiskReport-table tbody tr:nth-child(8) {
+  color: #ee2528;
+}
+
+.serviceRiskReport-table tbody tr:nth-child(9) {
+  color: #0586ec;
+}
+
+.serviceRiskReport-table tbody tr:nth-child(10) {
+  color: #07da01;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ee2528;
+  border-radius: 5px;
+
+  outline: none;
+  transition: background-color 0.3s, border-color 0.3s;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+  background-color: white;
+  border-color: #ee2528;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\2713";
+  display: block;
+  text-align: center;
+  color: #ee2528;
+  margin: -3px;
+}
+
+input[type="checkbox"]:checked:hover {
+  border-color: #ff0000;
+  box-shadow: 0 0 5px #ff0000;
+}
+
+.serviceRiskReport-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.serviceRiskReport-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(89.65deg, #e92431 0.86%, #8c36f2 106.14%);
+  border-radius: 5px;
+}
+
+.serviceRiskReport-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* paggination  styles.css */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.pagenumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagenumber p {
+  color: #e92431;
+  border-radius: 22%;
+  margin: 5px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagenumber p:hover {
+  background-color: #fff5f5;
+}
+.previous-btn {
+  position: absolute;
+  left: 240px;
+  width: 95px;
+  height: 32px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px 0px #1018280d;
+  color: #344054;
+  cursor: pointer;
+}
+.next-btn {
+  position: absolute;
+  right: 20px;
+  width: 75px;
+  height: 28px;
+  padding: 8px, 14px, 8px, 14px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px 0px #1018280d;
+  color: #344054;
+  cursor: pointer;
+}
+/* vioce  styles.css */
+
+.container {
+  border: 1px solid #d6d6d6; /* Add a border inside the container with a blue color */
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 60px 15px 15px 60px; /* Curved top corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Make the width 100% for responsiveness */
+  max-width: 78%; /* Set a maximum width for large screens */
+  height: 18px;
+  position: fixed;
+  top: 535px;
+}
+.image {
+  height: 35px;
+  margin-right: 15px;
+  margin-left: -10px;
+  border: 2px solid #bdddff;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.input-field {
+  flex: 1;
+  height: 16px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.submit-button {
+  background-color: #fcfcfc; /* Orange background color */
+  color: rgb(240, 48, 48);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: background-color 0.8s ease; /* Smooth color transition */
+}
+
+.submit-button:hover {
+  background-color: #f9f9f9; /* Darker orange on hover */
+  transition: background-color 0.8s ease;
+}
+.submit-button:active {
+  background-color: #ebebeb;
+}
+
+.show {
+  display: table-cell;
+}
+
+td.hide {
+  display: none;
+}
+
+/*popup*/
+.voice-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 20px;
+
+  z-index: 9999;
+}
+
+.voice-popup img {
+  max-width: 250px;
+}
+
+.voice-popup button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.voice-popup button:focus {
+  outline: none;
+}
+
+/*  */
+.key-value {
+  position: absolute;
+  bottom: 165px;
+  margin-left: 22%;
+  height: 14px;
+  margin-top: 5px;
+}
