@@ -268,7 +268,7 @@ input[type="checkbox"]:checked:hover {
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 39px;
+  margin-top: -156px;
 }
 .pagenumber {
   display: flex;
@@ -410,9 +410,9 @@ td.hide {
 
 /*  */
 .key-value {
-  position: absolute;
+  margin-top: 177px;
+  position: relative;
   bottom: 165px;
   margin-left: 22%;
   height: 14px;
-  margin-top: 5px;
 }
