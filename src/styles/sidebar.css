@@ -1,6 +1,6 @@
 aside {
   width: 220px;
-  height: 92vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   background-color: #ee2528;
@@ -9,6 +9,33 @@ aside {
   overflow: hidden;
 }
 
+a.active .icon-text {
+  background: linear-gradient(to right, #fb0925, #8417d7);
+  -webkit-background-clip: text;
+  color: transparent;
+  vertical-align: 7%;
+}
+
+.icon-e{
+  margin-right: 5px;
+} 
+
+a.active .icon-e {
+  color: red;
+  margin-right: 5px;
+}
+
+
+a .icon-text {
+  color: white;
+}
+
+a:hover .icon-text {
+  background: linear-gradient(to right, #fb0925, #8417d7);
+  -webkit-background-clip: text;
+  color: transparent;
+  vertical-align: 7%;
+}
 aside a {
   font-size: 16px;
   color: #fff;
@@ -21,7 +48,11 @@ aside a {
   padding-left: 20px;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
+  margin-bottom: 5px;
+  margin-top: 5px;
+
 }
+
 
 aside a:hover {
   color: #f80909;
@@ -31,10 +62,13 @@ aside a:hover {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   margin-left: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
-aside a i {
+.icons {
   margin-right: 5px;
+  
 }
 
 aside a:hover::after {
@@ -66,19 +100,19 @@ aside p {
   padding: 40px 0;
 }
 
-body {
+/* body {
   font-family: "Roboto";
   width: 100%;
   height: 100vh;
   margin: 0;
-}
+} */
 
 .lastimg {
   margin: 20px;
   width: 140px;
   height: 100px;
   position: absolute;
-  top: 427px;
+  top: 462px;
   left: 16px;
 }
 

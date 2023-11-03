@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import "../styles/ServiceRiskReport.css"; // Import the CSS file
 import speach from "../image/speach.png";
@@ -182,26 +183,27 @@ function ServiceRiskReport() {
       ],
       additionalData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     },
-    {
-      name: "Cello Protecs 80000U 6x0 8ml SYR AUS",
-      dates: [
-        "04 Sep",
-        "11 Sep",
-        "18 Sep",
-        "25 Sep",
-        "02 Oct",
-        "09 Oct",
-        "16 Oct",
-        "23 Oct",
-        "30 Oct",
-        "06 Nov",
-        "13 Nov",
-        "20 Nov",
-        "27 Nov",
-        "04 Dec",
-      ],
-      additionalData: [60, 53, 46, 72, 65, 58, 50, 47, 53, 64, 57, 49, 43, 37],
-    },
+    // {
+    //   name: "Cello Protecs 80000U 6x0 8ml SYR AUS",
+    //   dates: [
+    //     "04 Sep",
+    //     "11 Sep",
+    //     "18 Sep",
+    //     "25 Sep",
+    //     "02 Oct",
+    //     "09 Oct",
+    //     "16 Oct",
+    //     "23 Oct",
+    //     "30 Oct",
+    //     "06 Nov",
+    //     "13 Nov",
+    //     "20 Nov",
+    //     "27 Nov",
+    //     "04 Dec",
+    //   ],
+    //   additionalData: [60, 53, 46, 72, 65, 58, 50, 47, 53, 64, 57, 49, 43, 37],
+    // },
+  
   ];
 
   useEffect(() => {
@@ -493,11 +495,9 @@ const handleSearchInputChange = (event) => {
 
 export default ServiceRiskReport;
 
-//===========================================================>>>>>>>>>>>>>>>>
 
-
-
-//==============================================================>>>
+// //===========================================================>>>>>>>>>>>>>>>>
+////////////////////=================================================>>>>below good
 // import React, { useState, useEffect } from "react";
 // import "../styles/ServiceRiskReport.css"; // Import the CSS file
 // import speach from "../image/speach.png";
@@ -682,11 +682,31 @@ export default ServiceRiskReport;
 //       ],
 //       additionalData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 //     },
+//     {
+//       name: "Cello Protecs 80000U 6x0 8ml SYR AUS",
+//       dates: [
+//         "04 Sep",
+//         "11 Sep",
+//         "18 Sep",
+//         "25 Sep",
+//         "02 Oct",
+//         "09 Oct",
+//         "16 Oct",
+//         "23 Oct",
+//         "30 Oct",
+//         "06 Nov",
+//         "13 Nov",
+//         "20 Nov",
+//         "27 Nov",
+//         "04 Dec",
+//       ],
+//       additionalData: [60, 53, 46, 72, 65, 58, 50, 47, 53, 64, 57, 49, 43, 37],
+//     },
 //   ];
 
 //   useEffect(() => {
 //     if (search.trim() === "") {
-//       setFilteredData(medicineData); // Set back to original data if search is empty
+//       setFilteredData(medicineData); 
 //     }
 //   }, [search, medicineData]);
 
@@ -699,7 +719,7 @@ export default ServiceRiskReport;
 //         const speechToText = event.results[0][0].transcript;
 //         setSearch(speechToText);
 
-//         // Pass the filter keyword directly to filterData function
+        
 //         filterData(speechToText);
 //         setShowPopup(false);
 //       };
@@ -708,6 +728,9 @@ export default ServiceRiskReport;
 //       console.error("Speech recognition is not supported in this browser.");
 //     }
 //   };
+  
+
+
 
 //   const extractFilterKeyword = (input) => {
 //     const keywords = [
@@ -754,12 +777,12 @@ export default ServiceRiskReport;
 //     setFilteredData(filteredResults);
 //   };
 
-//   const handleSearchSubmit = () => {
-//     const filterKeyword = extractFilterKeyword(search);
-//     if (filterKeyword) {
-//       filterData(filterKeyword);
-//     }
-//   };
+//   // const handleSearchSubmit = () => {
+//   //   const filterKeyword = extractFilterKeyword(search);
+//   //   if (filterKeyword) {
+//   //     filterData(filterKeyword);
+//   //   }
+//   // };
 
 //   const handleButtonClick = () => {
 //     const filterKeyword = extractFilterKeyword(search);
@@ -767,6 +790,19 @@ export default ServiceRiskReport;
 //       filterData(filterKeyword);
 //     }
 //   };
+
+  
+// const handleSearchInputChange = (event) => {
+//   const inputValue = event.target.value;
+//   setSearch(inputValue);
+
+//   // Filter the data based on the input value
+//   const filteredResults = medicineData.filter((medicine) =>
+//     medicine.name.toLowerCase().includes(inputValue.toLowerCase())
+//   );
+
+//   setFilteredData(filteredResults);
+// };
 
 //   return (
 //     <>
@@ -780,14 +816,25 @@ export default ServiceRiskReport;
 //           <p className="filter-text">Filters</p>
 //         </div>
 //         <div className="search">
-//           <div className="search-input-container">
-//             <div className="search-icon">
-//               <img src={FaSearchIcon} alt="Search" />
-//             </div>
-//             <input type="text" placeholder="Search" className="search-input" />
-//           </div>
-//           <button className="go-button">Go</button>
-//         </div>
+//   <div className="search-input-container">
+//     <div className="search-icon">
+//       <img src={FaSearchIcon} alt="Search" />
+//     </div>
+//     <input 
+//       type="text" 
+//       placeholder="Search" 
+//       className="search-input"
+//       value={search}
+//       onChange={handleSearchInputChange} 
+//     />
+//   </div>
+//   <button 
+//     className="go-button"
+    
+//   >
+//     Go
+//   </button>
+// </div>
 //         <div className="dropdowns">
 //           <select className="dropdown-a">
 //             <option value="AUS">AUS</option>
@@ -927,7 +974,9 @@ export default ServiceRiskReport;
 //           placeholder="Type your message..."
 //           className="input-field"
 //           value={search}
-//           onChange={(e) => setSearch(e.target.value)}
+//           onChange={(e) => {
+//             setSearch(e.target.value);
+//           }}
 //         />
 //         <button className="submit-button" onClick={handleButtonClick}>
 //           Submit
@@ -944,4 +993,8 @@ export default ServiceRiskReport;
 
 // export default ServiceRiskReport;
 
-// //===========================================================>>>>>>>>>>>>>>>>
+//===========================================================>>>>>>>>>>>>>>>>
+
+
+
+
