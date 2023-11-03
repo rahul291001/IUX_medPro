@@ -202,26 +202,6 @@ function ServiceRiskReport() {
       ],
       additionalData: [60, 53, 46, 72, 65, 58, 50, 47, 53, 64, 57, 49, 43, 37],
     },
-    {
-      name: "Dolo 560mg 30Tab AUS",
-      dates: [
-        "04 Sep",
-        "11 Sep",
-        "18 Sep",
-        "25 Sep",
-        "02 Oct",
-        "09 Oct",
-        "16 Oct",
-        "23 Oct",
-        "30 Oct",
-        "06 Nov",
-        "13 Nov",
-        "20 Nov",
-        "27 Nov",
-        "04 Dec",
-      ],
-      additionalData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    },
   ];
 
   useEffect(() => {
