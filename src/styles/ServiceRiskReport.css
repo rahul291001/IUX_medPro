@@ -238,11 +238,13 @@ input[type="checkbox"]:checked {
 }
 
 input[type="checkbox"]:checked::before {
+  font-size: 10px;
+  color: #ff0000;
   content: "\2713";
   display: block;
+  margin: 0px;
   text-align: center;
-  color: #ee2528;
-  margin: -3px;
+  font-weight: bold;
 }
 
 input[type="checkbox"]:checked:hover {
@@ -332,7 +334,7 @@ input[type="checkbox"]:checked:hover {
   max-width: 78%; /* Set a maximum width for large screens */
   height: 18px;
   position: fixed;
-  top: 582px;
+  bottom: 0px;
 }
 .image {
   height: 35px;
