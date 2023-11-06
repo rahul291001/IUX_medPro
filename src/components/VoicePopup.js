@@ -1,5 +1,3 @@
-// VoicePopup.jsx
-
 import React, { useEffect } from "react";
 import imgv from "../image/record.png";
 import "../styles/voice.css";
@@ -8,14 +6,17 @@ const VoicePopup = ({ onClose }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();
-    }, 3000); // Close after 3 seconds (adjust as needed)
+    }, 3000);
 
-    return () => clearTimeout(timer); // Clean up timer on component unmount
+    return () => clearTimeout(timer);
   }, [onClose]);
 
   return (
-    <div className="voice-popup">
-      <img src={imgv} alt="Voice Popup" />
+    <div>
+      <div className="backdrop"></div>
+      <div className="voice-popup">
+        <img src={imgv} alt="Voice Popup" />
+      </div>
     </div>
   );
 };
