@@ -1,6 +1,6 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo} from "react";
 import "../styles/ServiceRiskReport.css";
+import Notification from "./Notifications";
 import speach from "../image/speach.png";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { AiOutlineSwapRight } from "react-icons/ai";
@@ -9,13 +9,40 @@ import FaSearchIcon from "../image/search.svg";
 import CustomFilterIcon from "../image/Filters lines.svg";
 import bar from "../image/bar.svg";
 import keys from "../image/keys.svg";
+
 function ServiceRiskReport() {
+  //rahul made changes here
+  const [notifications, setNotifications] = useState([]);
+
+
   const [filteredData, setFilteredData] = useState([]);
 
   const [isBlinking, setIsBlinking] = useState(false);
   const [search, setSearch] = useState("");
 
+  
+  //rahul made changes here
   const [showPopup, setShowPopup] = useState(false);
+  const [activityTime, setActivityTime] = useState(0);
+  
+
+  
+
+  //rahul made changes here
+  const showAttractiveAlert = (message) => {
+    setNotifications((prevNotifications) => [
+      ...prevNotifications,
+      { message, color: 'red' },
+    ]);
+  };
+//rahul made changes here
+  const startTimer = () => {
+    const timer = setInterval(() => {
+      setActivityTime((prevTime) => prevTime + 1);
+    }, 1000); 
+
+    return timer;
+  };
   const medicineData = [
     {
       name: "Concerta ER 54mg 24cnt 30s AUS",
@@ -183,6 +210,7 @@ function ServiceRiskReport() {
       ],
       additionalData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     },
+    
     // {
     //   name: "Cello Protecs 80000U 6x0 8ml SYR AUS",
     //   dates: [
@@ -205,10 +233,12 @@ function ServiceRiskReport() {
     // },
   
   ];
+  //rahul made changes here
+  const memoizedMedicineData = useMemo(() => medicineData, []);
 
   useEffect(() => {
     if (search.trim() === "") {
-      setFilteredData(medicineData);
+      setFilteredData(memoizedMedicineData);
     } else {
       const filterKeyword = extractFilterKeyword(search);
   
@@ -222,7 +252,26 @@ function ServiceRiskReport() {
         setFilteredData(filteredResults); 
       }
     }
-  }, [search, medicineData]);
+  }, [search, memoizedMedicineData]);
+  
+//rahul made changes here
+  useEffect(() => {
+    if (activityTime > 5000) {
+      
+      showAttractiveAlert(
+        "You have been working for 5 hours. It's time to take a rest."
+      );
+  
+      const updateTimer = setTimeout(() => {
+        setNotifications([]);
+      }, 5000);
+  
+      return () => clearTimeout(updateTimer);
+    }
+  }, [activityTime]);
+  
+
+  
   
 
   const handleVoiceInput = () => {
@@ -247,7 +296,17 @@ function ServiceRiskReport() {
   };
   
 
+  const resetTimer = (timer) => {
+    clearInterval(timer);
+    setActivityTime(0);
+  };
+  useEffect(() => {
+    let timer = startTimer();
 
+    return () => {
+      resetTimer(timer);
+    };
+  }, []);
 
   const extractFilterKeyword = (input) => {
     const keywords = [
@@ -293,6 +352,7 @@ function ServiceRiskReport() {
 
     setFilteredData(filteredResults);
   };
+  
 
   // const handleSearchSubmit = () => {
   //   const filterKeyword = extractFilterKeyword(search);
@@ -321,6 +381,18 @@ const handleSearchInputChange = (event) => {
 
   return (
     <>
+    {notifications.map((notification, index) => (
+        <Notification
+          key={index}
+          message={notification.message}
+          color={notification.color}
+          onClose={() => {
+            const updatedNotifications = [...notifications];
+            updatedNotifications.splice(index, 1);
+            setNotifications(updatedNotifications);
+          }}
+        />
+      ))}
       <div className="service-risk-report">
         <div className="filters">
           <img
@@ -503,6 +575,7 @@ const handleSearchInputChange = (event) => {
           </div>
         )}
       </div>
+      
     </>
   );
 }
